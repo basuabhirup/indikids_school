@@ -10,8 +10,8 @@ export function Hero() {
       className="relative min-h-[90vh] flex items-center overflow-hidden bg-linear-to-br from-yellow-50 via-white to-blue-50"
     >
       {/* Abstract Background Shapes */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl translate-y-1/4 -translate-x-1/4" />
+      <div className="absolute top-0 right-0 w-125 h-125 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
+      <div className="absolute bottom-0 left-0 w-125 h-125 bg-secondary/10 rounded-full blur-3xl translate-y-1/4 -translate-x-1/4" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         <motion.div
@@ -29,7 +29,7 @@ export function Hero() {
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading text-slate-900 leading-[1.1]">
             Where Kids <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-orange-500">
               Learn to be Illuminated
             </span>
           </h1>
@@ -73,17 +73,17 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
-          <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+          <div className="relative z-10 rounded-4xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
             <img
               src={heroImage}
               alt="Happy kids at school"
-              className="w-full h-auto object-cover aspect-[4/3]"
+              className="w-full h-auto object-cover aspect-4/3"
             />
           </div>
 
           {/* Decorative elements behind image */}
-          <div className="absolute -z-10 top-10 -right-10 w-full h-full bg-secondary rounded-[2rem] transform rotate-6" />
-          <div className="absolute -z-10 -bottom-10 -left-10 w-full h-full bg-accent rounded-[2rem] transform -rotate-3" />
+          <div className="absolute -z-10 top-10 -right-10 w-full h-full bg-secondary rounded-4xl transform rotate-6" />
+          <div className="absolute -z-10 -bottom-10 -left-10 w-full h-full bg-accent rounded-4xl transform -rotate-3" />
         </motion.div>
       </div>
     </section>
