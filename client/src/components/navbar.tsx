@@ -25,7 +25,7 @@ export function Navbar() {
       // close the mobile menu after a short delay so the scroll can begin
       // this avoids some mobile browsers cancelling the smooth scroll when the
       // overlay is removed immediately
-      setTimeout(() => setIsOpen(false), 250);
+      setTimeout(() => setIsOpen(false), 750);
     }
   };
 
@@ -55,7 +55,7 @@ export function Navbar() {
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
                 aria-label={`Go to ${link.name}`}
-                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors font-heading"
+                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors font-heading hover:scale-105 hover:cursor-pointer"
               >
                 {link.name}
               </button>
