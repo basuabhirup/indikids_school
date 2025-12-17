@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "../../../attached_assets/generated_images/logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,13 +34,13 @@ export function Navbar() {
             onClick={() => scrollToSection("#home")}
           >
             <img
-              src="/attached_assets/logo.jpeg"
+              src={Logo}
               alt="IndiKids Logo"
-              className="h-12 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
-            <span className="font-heading font-bold text-2xl text-primary hidden sm:block">
+            {/* <span className="font-heading font-bold text-2xl text-primary hidden sm:block">
               INDIKIDS
-            </span>
+            </span> */}
           </div>
 
           {/* Desktop Nav */}
@@ -54,8 +55,8 @@ export function Navbar() {
               </button>
             ))}
             <Button
-              className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 font-bold shadow-lg shadow-primary/20 transition-all hover:scale-105"
-              onClick={() => window.open("tel:9564177559")}
+              className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 font-bold shadow-lg shadow-primary/20 transition-all hover:scale-105 hover:cursor-pointer"
+              onClick={() => window.open("tel:+919564177559")}
             >
               <Phone className="w-4 h-4 mr-2" />
               Call Now

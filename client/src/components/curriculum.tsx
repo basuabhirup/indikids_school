@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import WoodenToys from "../../../attached_assets/generated_images/montessori_educational_wooden_toys_and_alphabet_puzzle_on_a_table.png";
 
 const curriculumData = [
   {
@@ -20,8 +21,8 @@ const curriculumData = [
       "Finger counting 1-10",
       "Bengali alphabets and numbers",
       "Rhymes, Singing, Dancing, Drawing",
-      "Practical activities"
-    ]
+      "Practical activities",
+    ],
   },
   {
     class: "Nursery",
@@ -35,8 +36,8 @@ const curriculumData = [
       "Bengali alphabets, numbers with names",
       "English & Bengali conversation",
       "Story telling",
-      "Activity based learning"
-    ]
+      "Activity based learning",
+    ],
   },
   {
     class: "Lower K.G.",
@@ -49,8 +50,8 @@ const curriculumData = [
       "Concept of rainbow & colors",
       "Bengali grammar & sentence construction",
       "English & Bengali rhymes",
-      "Practical Activities"
-    ]
+      "Practical Activities",
+    ],
   },
   {
     class: "Upper K.G.",
@@ -63,8 +64,8 @@ const curriculumData = [
       "Addition & Subtraction (1-3 digits)",
       "GK & Social awareness",
       "Bengali paragraph writing",
-      "Creative activities"
-    ]
+      "Creative activities",
+    ],
   },
   {
     class: "Class I",
@@ -77,8 +78,8 @@ const curriculumData = [
       "Tables 1-10",
       "Add, Sub, Mul, Div, Simplification",
       "Environment & Science concepts",
-      "Bengali Translation & Grammar"
-    ]
+      "Bengali Translation & Grammar",
+    ],
   },
   {
     class: "Class II",
@@ -91,8 +92,8 @@ const curriculumData = [
       "3D figures and shapes",
       "Environment & Society",
       "Story writing",
-      "Practical Science concepts"
-    ]
+      "Practical Science concepts",
+    ],
   },
   {
     class: "Class III",
@@ -105,8 +106,8 @@ const curriculumData = [
       "Sums up to 5 digits",
       "Science & Environmental Studies",
       "Computer Application basics",
-      "Bengali comprehension"
-    ]
+      "Bengali comprehension",
+    ],
   },
   {
     class: "Class IV",
@@ -118,9 +119,9 @@ const curriculumData = [
       "GK: Recent incidents",
       "History, Geography, Science",
       "Computer Application",
-      "Creative Writing in English & Bengali"
-    ]
-  }
+      "Creative Writing in English & Bengali",
+    ],
+  },
 ];
 
 export function Curriculum() {
@@ -135,12 +136,20 @@ export function Curriculum() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">Academic <br/> Curriculum</h2>
+                <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
+                  Academic Curriculum
+                </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  We follow the CBSE School curriculum, tailored to provide a strong foundation for every age group. From play-based learning to structured academic concepts.
+                  We follow the CBSE School curriculum, tailored to provide a
+                  strong foundation for every age group. From play-based
+                  learning to structured academic concepts.
                 </p>
                 <div className="rounded-2xl overflow-hidden shadow-lg border-4 border-white rotate-2 hidden lg:block">
-                  <img src="/attached_assets/generated_images/bright_kindergarten_classroom_with_colorful_furniture_and_educational_toys.png" alt="Classroom" className="w-full h-auto" />
+                  <img
+                    src={WoodenToys}
+                    alt="Wooden Toys"
+                    className="w-full h-auto"
+                  />
                 </div>
               </motion.div>
             </div>
@@ -149,17 +158,31 @@ export function Curriculum() {
           <div className="bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-100">
             <Accordion type="single" collapsible className="w-full space-y-4">
               {curriculumData.map((item, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="bg-white border border-slate-200 rounded-xl px-4 shadow-sm data-[state=open]:border-primary data-[state=open]:ring-1 data-[state=open]:ring-primary/20">
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="bg-white border border-slate-200 rounded-xl px-4 shadow-sm data-[state=open]:border-primary data-[state=open]:ring-1 data-[state=open]:ring-primary/20"
+                >
                   <AccordionTrigger className="hover:no-underline py-4">
                     <div className="flex items-center gap-4 text-left">
-                      <span className="font-heading font-bold text-lg md:text-xl text-slate-800">{item.class}</span>
-                      <Badge variant="secondary" className="bg-secondary/20 text-yellow-800 hover:bg-secondary/30">Age {item.age}</Badge>
+                      <span className="font-heading font-bold text-lg md:text-xl text-slate-800">
+                        {item.class}
+                      </span>
+                      <Badge
+                        variant="secondary"
+                        className="bg-secondary/20 text-yellow-800 hover:bg-secondary/30"
+                      >
+                        Age {item.age}
+                      </Badge>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="pb-4">
                     <ul className="grid gap-2 text-gray-600">
                       {item.topics.map((topic, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm md:text-base">
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 text-sm md:text-base"
+                        >
                           <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
                           {topic}
                         </li>
