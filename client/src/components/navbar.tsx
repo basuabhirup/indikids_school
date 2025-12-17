@@ -28,13 +28,13 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div 
-            className="flex items-center gap-2 cursor-pointer" 
+          <div
+            className="flex items-center gap-2 cursor-pointer"
             onClick={() => scrollToSection("#home")}
           >
-            <img 
-              src="/attached_assets/WhatsApp_Image_2025-12-17_at_08.08.28_1765979951026.jpeg" 
-              alt="IndiKids Logo" 
+            <img
+              src="/attached_assets/logo.jpeg"
+              alt="IndiKids Logo"
               className="h-12 w-auto object-contain"
             />
             <span className="font-heading font-bold text-2xl text-primary hidden sm:block">
@@ -53,7 +53,7 @@ export function Navbar() {
                 {link.name}
               </button>
             ))}
-            <Button 
+            <Button
               className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 font-bold shadow-lg shadow-primary/20 transition-all hover:scale-105"
               onClick={() => window.open("tel:9564177559")}
             >
@@ -68,7 +68,11 @@ export function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-gray-600 hover:text-primary transition-colors"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -93,7 +97,7 @@ export function Navbar() {
                   {link.name}
                 </button>
               ))}
-              <Button 
+              <Button
                 className="w-full bg-primary text-white rounded-full font-bold"
                 onClick={() => window.open("tel:9564177559")}
               >
