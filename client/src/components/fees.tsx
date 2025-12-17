@@ -67,11 +67,11 @@ export function Fees() {
                 <span className="font-bold text-secondary">₹800</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                <span>L.K.G.</span>
+                <span>Lower K.G.</span>
                 <span className="font-bold text-secondary">₹900</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                <span>U.K.G.</span>
+                <span>Upper K.G.</span>
                 <span className="font-bold text-secondary">₹1000</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-2">
@@ -137,7 +137,7 @@ export function Fees() {
 
         <div className="text-center mt-12">
           <Button
-            className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-14 text-lg font-bold shadow-xl shadow-primary/20 transition-all hover:scale-105 hover:cursor-pointer"
+            className="bg-primary hover:bg-primary/90 text-white rounded-full my-8 px-8 h-14 text-lg font-bold shadow-xl shadow-primary/20 transition-all hover:scale-105 hover:cursor-pointer"
             size={"lg"}
             onClick={() => window.open("tel:+919564177559")}
           >
