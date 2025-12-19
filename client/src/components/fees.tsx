@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Phone } from "lucide-react";
+import { Check, Phone, Download } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function Fees() {
@@ -58,10 +58,6 @@ export function Fees() {
             </h3>
 
             <div className="space-y-4">
-              <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                <span>Play Group</span>
-                <span className="font-bold text-secondary">₹700</span>
-              </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-2">
                 <span>Nursery</span>
                 <span className="font-bold text-secondary">₹800</span>
@@ -135,7 +131,7 @@ export function Fees() {
           </motion.div>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 flex flex-col md:flex-row space-x-4 justify-center items-center">
           <Button
             className="bg-primary hover:bg-primary/90 text-white rounded-full my-8 px-8 h-14 text-lg font-bold shadow-xl shadow-primary/20 transition-all hover:scale-105 hover:cursor-pointer"
             size={"lg"}
@@ -143,6 +139,17 @@ export function Fees() {
           >
             <Phone className="w-4 h-4 mr-2" />
             Call Now
+          </Button>
+
+          <Button
+            size="lg"
+            variant="outline"
+            className="rounded-full px-8 h-14 text-lg font-bold border-2 border-slate-200 text-slate-700 hover:bg-slate-50 hover:text-primary transition-all hover:cursor-pointer hover:scale-105"
+            onClick={() => window.open("/INDIKIDS_BROCHURE_2026.pdf", "_blank")}
+            rel="noopener noreferrer"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Download Brochure
           </Button>
         </div>
       </div>

@@ -10,21 +10,6 @@ import WoodenToys from "../../../attached_assets/generated_images/montessori_edu
 
 const curriculumData = [
   {
-    class: "Play Group",
-    age: "2+",
-    topics: [
-      "Recognition of English alphabets A-Z (Capital)",
-      "Numbers 1-20",
-      "Basic colours, figures and shapes",
-      "Flowers, fruits, birds and animals",
-      "Basic manners",
-      "Finger counting 1-10",
-      "Bengali alphabets and numbers",
-      "Rhymes, Singing, Dancing, Drawing",
-      "Practical activities",
-    ],
-  },
-  {
     class: "Nursery",
     age: "3+",
     topics: [
@@ -135,6 +120,7 @@ export function Curriculum() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
+                className="text-center md:text-left"
               >
                 <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
                   Academic Curriculum
@@ -155,7 +141,7 @@ export function Curriculum() {
             </div>
           </div>
 
-          <div className="bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-100">
+          <div className="bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-100 md:mt-16">
             <Accordion type="single" collapsible className="w-full space-y-4">
               {curriculumData.map((item, index) => (
                 <AccordionItem
@@ -163,7 +149,7 @@ export function Curriculum() {
                   value={`item-${index}`}
                   className="bg-white border border-slate-200 rounded-xl px-4 shadow-sm data-[state=open]:border-primary data-[state=open]:ring-1 data-[state=open]:ring-primary/20"
                 >
-                  <AccordionTrigger className="hover:no-underline py-4">
+                  <AccordionTrigger className="hover:no-underline py-4 hover:cursor-pointer">
                     <div className="flex items-center gap-4 text-left">
                       <span className="font-heading font-bold text-lg md:text-xl text-slate-800">
                         {item.class}
